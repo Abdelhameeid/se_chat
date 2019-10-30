@@ -1,0 +1,507 @@
+/** Extra small devices (portrait phones, less than 576px)**/
+@media (max-width: 575.98px)
+{
+    .search-bar .contact-bar
+    {
+        float: none;
+    }
+    .search-bar .search-sec
+    {
+        float: none;
+        padding: 0;
+    }
+    .mini-about h2
+    {
+        font-size: 25px
+    }
+    .mini-about p
+    {
+        font-size: 14px
+    }
+    .pages-sec .pages-dv
+    {
+        padding: 0;
+    }
+    .carousel-item img
+    {
+        height: 150px;
+        margin-bottom: 10%
+    }
+    .subscripe-sec 
+    {
+        margin-left: 10%;
+    }
+    .contact-foot , .link-sec
+    {
+        margin-left: 7%
+    }
+    .forms-pages , .pages-sec
+    {
+        padding-left: 0
+    }
+    .adddata .addform
+    {
+        border-radius: 1%;
+        margin-bottom: 6%
+    }
+    .adddata .addform h2
+    {
+        font-size: 25px
+    }
+    .filter .nice-select
+    {
+        width: 100%
+    }
+    .filter .btn
+    {
+        width: 100%
+    }
+    .filter h3
+    {
+        font-size: 23px
+    }
+    .mech h3
+    {
+        padding-top: 26%
+    }
+    .contact-bar .social-bar li
+    {
+        font-size: 11px;
+    } 
+    .contact-bar .social-bar h6
+    {
+        font-size: 10px;
+    }
+    .contact-bar .address-bar p
+    {
+        font-size: 7px
+    }
+    footer
+    {
+        padding-bottom: 30%
+    }
+    .mech h3
+    {
+        font-size: 20px
+    }
+    .mech h4
+    {
+        font-size: 17px
+    }
+    .offdata p
+    {
+        font-size: 12px;
+    }
+    .offdata .pic img
+    {
+        height: 150px
+    }
+    .offdata h3
+    {
+        font-size: 16px;
+    }
+    .offdata h4
+    {
+        font-size: 12px; 
+    }
+    .user-profile .user-bio img
+    {
+        float: none;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        margin-left: 50%;
+        margin-bottom: 15%
+    }
+    .user-profile .user-bio .userdata
+    {
+        float: none;
+        width: 85%
+    }
+    .user-profile .user-bio h5
+    {
+        font-size: 13px
+    }
+    .user-profile .user-bio p 
+    {
+        font-size: 13px
+    }
+    .user-profile .user-bio h3, .user-profile .adsdata h3
+    {
+        font-size: 22px;
+        padding-top: 5%
+    }
+    .user-profile .user-bio .swiper-slide img
+    {
+        width: 115px;
+        height: 115px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+    {
+        bottom: 0;
+    }
+    .user-profile .adsdata td img
+    {
+        width: 30px;
+        height: 30px;
+    }
+    .table td, .table th
+    {
+        padding-left: .1rem;
+        padding-right: .1rem;
+        
+    }
+    .user-profile .adsdata td  button
+    {
+        font-size: 10px;
+        width: 10px;
+        height: 25px;
+        padding-left: 2px
+    }
+    .user-profile .adsdata p
+    {
+        font-size: 10px
+    }
+    .points .point-content .card 
+    {
+        margin-left: 4%;
+        width: 18rem !important;
+        margin-bottom: 5%
+    }
+    .about-page .about-head p
+    {
+        font-size: 10px;
+    }
+    .about-page .about-head h3
+    {
+        font-size: 25px
+    }
+    .table td h6
+    {
+        font-size: 10px
+    }
+    .log-page
+    {
+        padding-top: 30%
+    }
+    .auction-detail .auction-description
+    {
+        border: none
+    }
+    .auction-request .auction-head h3
+    {
+        font-size: 20px
+    }
+    .auction-request .auction-head p
+    {
+        font-size: 13px
+    }
+    .log-page form
+    {
+        width: 90%
+    }
+     .pages-sec .row
+    {
+        margin-right: 0;
+        margin-left: 0
+    }
+    .custom-file-label
+    {
+        font-size: 11px
+    }
+    .subscripe-sec .btn
+    {
+        width: 55%
+    }
+    .auction-request .small-request li
+    {
+        display: block;
+    }
+    .auction-detail .auction-description img
+    {
+        width: 100%
+    }
+    .table tr >td
+    {
+        font-size: 8px
+    }
+    .table thead th
+    {
+        font-size: 11px
+    }
+    .content-message
+    {
+        max-height: 300px
+    }
+    .message-box textarea
+    {
+        width: 70%;
+        height: 51px
+    }
+    .message-box button
+    {
+        width: 25%;
+        height: 50px
+    }
+    .message-box
+    {
+        padding-bottom: 2%
+    }
+    .chat .user-message li
+    {
+        width: 80%;
+    }
+    .chat .friend-message li
+    {
+        width: 80%
+    }
+     .message-sec
+    {
+        width: 14%
+    }
+    .content-message
+    {
+        padding: 5%
+    }
+    .chat .main-chat
+    {
+        height: 400px
+    }
+    .message-sec img
+    {
+        height: 24px;
+        width: 24px
+    }
+    .main-carousel-ads .carousel-indicators
+    {
+        bottom: 28%
+    }
+    .main-carousel-ads .carousel-fade .carousel-inner .carousel-item img
+    {
+        margin-bottom: 0%
+    }
+}
+
+/***Small devices (landscape phones, 576px and up)**/
+@media (min-width: 576px) and (max-width: 767.98px)
+{
+    .search-bar .search-sec
+    {
+        padding: 0
+    }
+    .pages-sec .pages-dv
+    {
+        padding: 0;
+    }
+    .carousel-item img
+    {
+        height: 300px;
+        margin-bottom: 5%
+    }
+    .contact-foot
+    {
+        margin-left: 0
+    }
+    .forms-pages , .pages-sec
+    {
+        padding-left: 0
+    }
+    .filter .nice-select
+    {
+        width: 50%
+    }
+    .filter .btn
+    {
+        width: 100%
+    }
+    .filter h3
+    {
+        font-size: 23px
+    }
+    .contact-bar .social-bar li
+    {
+        font-size: 11px;
+    }
+    .contact-bar .address-bar p
+    {
+        font-size: 8px;
+    }
+    .search-bar .search-sec .form-inline .form-control
+    {
+        width: 80%
+    }
+    .mech h3
+    {
+        padding-top: 15px;
+        font-size: 23px;
+    }
+    .mech h4
+    {
+        font-size: 17px
+    }
+    .subscripe-sec .btn
+    {
+        margin-top: 0px;
+        width: 50%
+    }
+    .user-profile .user-bio .swiper-slide img
+    {
+        width: 190px;
+        height: 190px
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+    {
+        bottom: -4px;
+    }
+    .points .point-content .card 
+    {
+        margin-bottom: 5%
+    }
+    .auction-detail .auction-description
+    {
+        border: none
+    }
+    .log-page form
+    {
+        width: 80%
+    }
+    .auction-request .small-request li
+    {
+        display: block;
+    }
+    .content-message
+    {
+        max-height: 300px
+    }
+    .message-box textarea
+    {
+        width: 70%;
+        height: 51px
+    }
+    .message-box button
+    {
+        width: 25%;
+        height: 50px
+    }
+    .message-box
+    {
+        padding-bottom: 2%
+    }
+      .chat .user-message li
+    {
+        width: 80%;
+    }
+    .chat .friend-message li
+    {
+        width: 80%
+    }
+    .message-sec
+    {
+        width: 12%
+    }
+     .chat .main-chat
+    {
+        height: 400px
+    }
+    .message-sec img
+    {
+        height: 24px;
+        width: 24px
+    }
+    .main-carousel-ads .carousel-indicators
+    {
+        bottom: 20%
+    }
+    .main-carousel-ads .carousel-fade .carousel-inner .carousel-item img
+    {
+        margin-bottom: 0%
+    }
+}
+
+/** Medium devices (tablets, 768px and up)**/
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+    .pages-sec .pages-dv
+    {
+        padding: 0
+    }
+    .carousel-item img
+    {
+        height: 350px;
+    }
+    .pages-sec
+    {
+        padding-left: 5%
+    }
+    .offcont .card
+    {
+        width: 10rem !important;
+        height: 15rem
+    }
+    .search-bar .search-sec .form-inline .form-control
+    {
+        width: 75%
+    }
+        .user-edit .btn-primary
+    {
+        margin-bottom: 2%;
+    }
+    .user-edit h4
+    {
+        font-size: 20px;
+    }
+    .user-profile .user-bio .swiper-slide img
+    {
+        height: 190px;
+        width: 190px
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+    {
+        bottom: -4px;
+    }
+    .user-profile .user-bio .userdata
+    {
+        width: 65%;
+    }
+    .user-link a
+    {
+        font-size: 14px
+    }
+    .user-link span
+    {
+        font-size: 11px
+    }
+    .log-page form
+    {
+        width:70%
+    }
+    .user-link h4
+    {
+       font-size: 20px 
+    }
+    .user-link .share-icon li
+    {
+        padding: 2%
+    }
+    .message-box button
+    {
+        height: 50px;
+        font-size: 20px
+    }
+    .message-box textarea
+    {
+        height: 51px;
+    }
+}
+
+/**Large devices (desktops, 992px and up)**/
+@media (min-width: 992px) and (max-width: 1199.98px) 
+{
+    
+}
+
+/** Extra large devices (large desktops, 1200px and up)**/
+@media (min-width: 1200px)
+{
+    
+}

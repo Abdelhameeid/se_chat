@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="{{ App::getLocale() }}" dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
+    <!--<![endif]-->
+    @include('dashboard.layouts.head')
+
+    <body class="hold-transition skin-blue fixed sidebar-mini">
+        <div class="wrapper">
+            <header class="main-header">
+                <!-- Logo -->
+                <a href="{{ route('dashboard') }}" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <!-- <span class="logo-mini">{{ $settings->title }}</span>
+                    <!-- logo for regular state and mobile devices -->
+                    <!-- <span class="logo-lg">{{ $settings->title }}</span> --> -->
+
+                    <span class="logo-mini">title</span>
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg">title</span>
+
+                </a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    </a>
+
+                    <div class="navbar-custom-menu">
+
+                        <ul class="nav navbar-nav">
+                            <!-- Website -->
+                            <li class="dropdown" >
+                                <a href="{{ route('home') }}" target="_blank" class="dropdown-toggle">{{ __("Go to website") }}</a>
+                            </li>
+                            <!-- Notifications: style can be found in dropdown.less -->
+                            <!-- <li class="dropdown notifications-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-warning">{{ count(Auth::user()->unreadNotifications) > 0 ? count(Auth::user()->unreadNotifications) : '' }}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    @if(count(Auth::user()->unreadNotifications) > 0)
+                                    <li class="header">{{ __('You have') }} {{ count(Auth::user()->unreadNotifications) }} {{ __('notifications') }}</li>
+                                    @endif
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu">
+                                            @if(Auth::user()->notifications()->count() > 0)
+                                            @foreach(Auth::user()->notifications as $notification)
+                                            <li @if($notification->read_at) style="background-color: antiquewhite;" @endif>
+                                                <a href="{{ $notification->data['url'] }}">
+                                                    <i class="fa fa-shopping-cart text-green"></i> {{  $notification->data['name'] }} {{  $notification->data['action'] }}
+                                                </a>
+                                            </li>
+                                            @endforeach
+                                            @endif
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <!-- Languages -->
+                            <li class="dropdown" >
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    @foreach(LaravelLocalization::getSupportedLocales(true) as $localeCode => $properties)
+                                        @if($localeCode == App::getLocale())
+                                            {{ $properties['native'] }}
+                                        @endif
+                                    @endforeach
+                                </a>
+                                <ul class="dropdown-menu">
+                                    @foreach(LaravelLocalization::getSupportedLocales(true) as $localeCode => $properties)
+                                        @if($localeCode != App::getLocale())
+                                        <li>
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </li>
+                            <!-- User Account: style can be found in dropdown.less -->
+                            <li class="dropdown user user-menu" >
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="{{ route('image_show', Auth::user()->image)}}" class="user-image" alt="User Image">
+                                    <span class="hidden-xs">{{ Auth::user()->name }}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <img src="{{ route('image_show', Auth::user()->image)}}" class="img-circle" alt="User Image">
+
+                                        <p>
+                                            {{ Auth::user()->name }}
+                                            <small>{{ __("Member since") }} {{ date('Y-m-d H:i', strtotime(Auth::user()->created_at)) }}</small>
+                                        </p>
+                                    </li>
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-right">
+                                            <a href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">{{ __('Logout') }}</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+             <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar:  -->
+                <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                    <img src="{{ route('image_show', Auth::user()->image)}}" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                    <p>{{ Auth::user()->name }}</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> {{ __('Online') }}</a>
+                    </div>
+                </div>
+                <!-- sidebar menu: -->
+                    <ul class="sidebar-menu">
+                        <!-- <li @if(url()->current() == route('dashboard')) class="active" @endif><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ __('Dashboard')}}</span></a></li>
+                        @permission("list_setting")
+                        <li @if(url()->current() == route('settings.index')) class="active" @endif><a href="{{ route('settings.index') }}"><i class="fa fa-cogs"></i> <span>{{ __('Settings')}}</span></a></li>
+                        @endpermission
+                        @component('sidebar_item', ['icon' => 'fa fa-users', 'label' => 'role'])
+                            role
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-user', 'label' => 'user'])
+                            user
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-address-card', 'label' => 'membership'])
+                            membership
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-money', 'label' => 'currency', 'plural' => 'currencies', 'plural_name' => 'currencies'])
+                            currency
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-globe', 'label' => 'country', 'plural' => 'countries', 'plural_name' => 'countries'])
+                            country
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-car', 'label' => 'city', 'plural' => 'cities', 'plural_name' => 'cities'])
+                            city
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-car', 'label' => 'area'])
+                            area
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-language', 'label' => 'language'])
+                            language
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-pencil', 'label' => 'page'])
+                            page
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-archive', 'label' => 'package'])
+                            package
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-share', 'label' => 'mail'])
+                            mail_setting
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-mobile', 'label' => 'mobile'])
+                            mobile_setting
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-server', 'label' => 'service'])
+                            service
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-server', 'label' => 'ad service'])
+                            adservice
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-facebook', 'label' => 'social'])
+                            social_setting
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-map-marker', 'label' => 'address', 'plural_name' => 'addresses'])
+                            address_setting
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-cubes', 'label' => 'point'])
+                            point
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-sliders', 'label' => 'ad'])
+                            ad
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-television', 'label' => 'offer'])
+                            offer
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-hourglass-start', 'label' => 'buy points request'])
+                            buypoints_request
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-hourglass-start', 'label' => 'buy services request'])
+                            buyservices_request
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-hourglass-start', 'label' => 'withdraw points request'])
+                            withdrawpoints_request
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-sliders', 'label' => 'slider'])
+                            slider
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-wrench', 'label' => 'work'])
+                            work
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-users', 'label' => 'subscribes'])
+                            subscribe
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-flag', 'label' => 'icon header'])
+                            iconheader
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-print', 'label' => 'term'])
+                            term
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-id-card', 'label' => 'privacy', 'plural_name' => 'privacies', 'plural' => 'privacies'])
+                            privacy
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-folder', 'label' => 'category', 'plural' => 'categories', 'plural_name' => 'categories'])
+                            category
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-plug', 'label' => 'project'])
+                            project
+                        @endcomponent
+                        @component('sidebar_item', ['icon' => 'fa fa-address-card', 'label' => 'bid'])
+                            bid
+                        @endcomponent
+                        @permission("list_serviceorder")
+                        <li @if(url()->current() == route('serviceorders.index')) class="active" @endif><a href="{{ route('serviceorders.index') }}"><i class="fa fa-shopping-cart"></i> <span> {{ ucfirst(__('service orders')) }} </span></a></li>
+                        @endpermission
+                        @permission("list_contact")
+                        <li @if(url()->current() == route('contacts.index')) class="active" @endif><a href="{{ route('contacts.index') }}"><i class="fa fa-envelope"></i> <span> {{ ucfirst(__('contacts')) }} </span></a></li>
+                        @endpermission
+                        @permission("list_revenue")
+                        <li @if(url()->current() == route('revenues.index')) class="active" @endif><a href="{{ route('revenues.index') }}"><i class="fa fa-money"></i> <span> {{ ucfirst(__('revenues')) }} </span></a></li>
+                        @endpermission -->
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>@yield('title')</h1>
+                    @yield('breadcrumbs')
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    @yield('content')
+                </section>
+                <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <!-- <strong>{!! $settings->copyright !!}</strong> -->
+                
+                <strong>copyright</strong>
+
+            </footer>
+        </div>
+        @include('dashboard.layouts.footer')
+    </body>
+</html>

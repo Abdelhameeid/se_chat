@@ -1,0 +1,120 @@
+/*** change font type **/
+.nav-admin , .search-bar .search-sec [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) 
+ , .navbar-light .navbar-nav .nav-link , .bg-dark  .navbar-nav .nav-link
+ , .mini-about h2 , .mini-about p , .pages-sec  a  , .pages-sec .pages-dv p
+ , .forms-pages  a , .subscripe-sec li , .forms-pages .forms span , .forms-pages .forms h4
+ , .subscripe-sec h3 , .contact-foot h3 , footer , .dropdown-item , .adddata .addform h2
+ , .adddata .addform .form-group label , .adddata .addform .form-group input 
+ , .adddata .addform  .custom-control-label , .adddata .addform button 
+ , .adddata .addform .form-group .custom-control-label , .filter h3 
+, .filter p , .filter .nice-select , .filter .nice-select .list 
+, .filter .btn , .offcont h3 , .offcont .card .card-body .card-title 
+, .offcont .card .card-body a , .offcont .card .card-body h6 
+, .offdata p , .offdata h3 , .rate-off h6 , .rate-off span 
+,  .user-edit  h4 ,  .user-edit  .btn-primary , .user-edit  .btn-danger
+, .user-link a , .user-link h4  , .user-link span , .user-profile .user-bio  h5
+, .user-profile .user-bio  .user-name , .user-profile .user-bio  h3 , .user-profile  .adsdata h3
+, .user-profile .user-bio  p , .user-profile  .adsdata p , .table td h6 , .user-profile .user-bio
+, .points .point-content h2 , .points .point-content p , .points .point-content .card .card-text
+, .points .point-content .card .btn-info , .points .modal-title , .points .modal-footer > :not(:first-child)
+, .points .custom-control-label , .contact-page .contact  , .contact-page .contact span 
+, .googleMap h3 , .googleMap iframe , .about-page .about-head h3 , .about-page .about-head p 
+, .about-page .about-head .about-choose span , .log-page h3 , .log-page a , .log-page button
+, .auction-detail .auction-description h3 , .auction-detail .auction-description p
+, .auction-detail .auction-subscribe h3 , .auction-detail .auction-subscribe p
+, .auction-detail .auction-subscribe span , .auction-detail .auction-subscribe label 
+, .auction-detail .auction-subscribe textarea , .auction-detail .auction-subscribe .btn-info 
+, .auction-detail .auction-subscribe .btn-danger , .auction-request .auction-head h3
+, .auction-request .auction-head p , .auction-request .auction-body h3 , .auction-request .auction-body span
+, .auction-request .auction-body .table .btn , .auction-request .small-request h3 , .auction-request .small-request li , .auction-request .small-request span  , .auction-request .small-request .btn , .notfication-page .notfication-body li , .general-head h4 , .chat .friend-chat h5 , .chat .user-message li , .chat .friend-message li , .message-box button , .message-sec , .message-sec .btn ,.slide-data
+{
+    font-family: 'Changa', sans-serif;
+}
+/*** change font type **/
+
+.search-bar .contact-bar
+{
+    float: right;
+}
+.search-bar .contact-bar a
+{
+   margin-right: 7%
+}
+.search-bar .search-sec 
+{
+    float: left;
+    padding-right: 15%;
+    padding-left: 0;
+}
+.navbar-expand-lg .navbar-nav .nav-link
+{
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+.contact-foot 
+{
+    text-align: right;
+    margin-right: 5%
+}
+.forms-pages 
+{
+    padding-right: 0;
+    padding-left: 0
+}
+.pages-sec
+{
+    padding-right: 0;
+    padding-left: 0;
+}
+.adddata .addform
+{
+    float: right;
+}
+.adddata .addslid
+{
+    float: left;
+}
+
+.search-bar .logo-bar
+{
+    float: right;
+    padding-left: 30%
+}
+.search-bar .search-sec
+{
+    float: left
+}
+.user-profile .user-bio .userpic
+{
+    float: right
+}
+.user-profile .user-bio .userdata
+{
+    float: left;
+    text-align: right;
+    width: 75%;
+}
+.user-link span
+{
+    float: left
+}
+
+.auction-detail .auction-description
+{
+    padding: 5%;
+}
+.auction-detail .auction-subscribe
+{
+    padding: 5%;
+    border-right: 1.5px solid #2d5d8c;
+    border-left: none;
+}
+.custom-file-label
+{
+    padding-right:20%
+}
+.chat .friend-message li
+{
+
+    float: left;
+}

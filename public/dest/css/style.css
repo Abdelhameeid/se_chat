@@ -1,0 +1,352 @@
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+
+.container {
+    margin-top:0px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+background: #848484;
+}
+
+header::after {
+content: '';
+display: table;
+clear: both;
+}
+
+.logo {
+float: left;
+text-align: center; 
+color: white; 
+font-weight: normal;
+margin-top:8px;
+
+}
+.letter{
+    text-transform: uppercase;
+    color: rgb(123, 238, 113); 
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.search{
+    width:200px;
+    float:left;
+    margin-top:15px;
+    margin-left:40px;
+    height:28px;
+    background-color:white;
+    color:black;
+}
+
+
+nav {
+float: right;
+}
+
+nav ul {
+margin: 0px;
+padding: 0;
+list-style: none;
+}
+
+nav li {
+display: inline-block;
+margin-left: 30px;
+padding-top: 15px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+font-family: sans-serif;
+}
+
+nav a:hover {
+color: #F2F2F2;
+color:greenyellow;
+text-decoration: none;
+}
+
+nav a::before {
+content: '';
+display: block;
+height: 5px;
+background-color: #444;
+
+position: absolute;
+top: 0;
+width: 0%;
+
+transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+width: 100%;
+}
+.img_user{
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+}
+
+
+body{
+background: #FFFFFF;
+font-family: sans-serif;
+/* background-image: url("3.jpeg"); */
+}
+#error{
+    width:400px;
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+    animation: css 0s 10s forwards;
+}
+@keyframes css  { to { visibility: hidden; } }
+
+.form-wrap{
+margin-top: 30px;
+width: 520px;
+background: #848484;
+padding: 20px 20px 25px 20px;
+box-sizing: border-box;
+position: fixed; left: 
+50%; top: 50%; transform:
+translate(-50%, -50%);
+}
+.form-wrap .sign{
+text-align: center; 
+color: #fff; 
+font-weight: normal;
+margin-bottom: 20px;
+}
+
+.form-wrap input{width: 100%;
+background: none; 
+border: 1px solid #fff; 
+border-radius: 3px; 
+padding: 6px 15px; 
+box-sizing: border-box; 
+margin-bottom: 20px; 
+font-size: 16px; 
+color: #fff;
+}
+
+#register_submit{
+background: #bac675; 
+border: 0; 
+cursor: pointer; 
+color: #3e3d3d;
+}
+#register_submit:active{
+ background: #2ecc71; 
+}
+
+::placeholder{color: #fff;}
+
+/* login form */
+
+
+.box{
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #848484;
+    text-align: center;
+  }
+  .box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .box input[type = "text"],.box input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #f9fcfd;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+  }
+  .box input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box input[type = "submit"]:hover{
+    background: #2ecc71;
+  }
+
+  /* messages */
+
+ 
+    
+        /* width */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #a7a7a7;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #929292;
+        }
+
+        ul {
+            margin: 10px;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .user-wrapper, .message-wrapper {
+            border: 1px solid #dddddd;
+            overflow-y: auto;
+        }
+
+        .user-wrapper {
+            height: 580px;
+        }
+
+        .user {
+            cursor: pointer;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .user:hover {
+            background: #eeeeee;
+        }
+
+        .user:last-child {
+            margin-bottom: 0;
+        }
+
+        .pending {
+            position: absolute;
+            left: 13px;
+            top: 9px;
+            background: #b600ff;
+            margin: 0;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            padding-left: 5px;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        .media-left {
+            margin: 0 10px;
+        }
+
+        .media-left img {
+            width: 64px;
+            border-radius: 64px;
+        }
+
+        .media-body p {
+            margin: 6px 0;
+        }
+
+        .message-wrapper {
+            padding: 10px;
+            height: 510px;
+            background: #eeeeee;
+        }
+
+        .messages .message {
+            margin-bottom: 15px;
+        }
+
+        .messages .message:last-child {
+            margin-bottom: 0;
+        }
+
+        .received, .sent {
+            width: 45%;
+            padding: 3px 10px;
+            border-radius: 10px;
+        }
+
+        .received {
+            background: #ffffff; 
+        }
+
+        .sent {
+            background: #ffffee;
+            float: right;
+            text-align: right;
+        }
+
+        .message p {
+            margin: 5px 0;
+        }
+
+        .date {
+            color: #777777;
+            font-size: 12px;
+        }
+
+        .active {
+            background: #eeeeee;
+        }
+
+        .write_message {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 15px 0 0 0;
+            display: inline-block;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            border: 1px solid #cccccc;
+        }
+
+        .write_message {
+            border: 1px solid #aaaaaa;
+        }
+  
+  
+
